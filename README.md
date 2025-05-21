@@ -9,3 +9,5 @@ Yes, I did use AI to help me find answers to some of the questions I had.
 
 - [How GPIO Configuration Works](docs/gpio_setup.md)
 - [Why the LED Blinks Without a Clock Setup](docs/clock_config.md)
+
+- [A Blinkin video](https://youtu.be/EhbUuldCprk)
