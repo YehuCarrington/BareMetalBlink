@@ -36,10 +36,6 @@ int main(void) {
     GPIOA_MODER |= (1 << (5 * 2)); // Set bit 10
     GPIOA_MODER |= (1 << (1 * 2));
 
-
-	uint32_t counter1 = 0;
-	uint32_t counter2 = 0;
-
     while (1) {
 
     	// Now that we've covered the basics of bit masking and register manipulation,
@@ -58,21 +54,8 @@ int main(void) {
     	//    Result (ODR):      [0b0000000000000000]  → PA5 is now cleared
 
 
-
-    	delay(1000);
-
-    	counter1++;
-    	counter2++;
-
-    	if(counter1 >= 500){
-    		GPIOA_ODR ^= (1 << 5); // Toggle PA5
-    		counter1 = 0;
-    	}
-
-    	if(counter2 >= 1500){
-    		GPIOA_ODR ^= (1 << 1); // Toggle PA1
-    		counter2 = 0;
-    	}
-
+        GPIOA_ODR ^= (1 << 5); // Toggle PA5
+        GPIOA_ODR ^= (1 << 1); // Toggle PA1
+        delay(100000);
     }
 }
