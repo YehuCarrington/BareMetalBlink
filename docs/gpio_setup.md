@@ -2,7 +2,7 @@
 
 The **STM32G4 series**, like most microcontrollers, provides access to GPIO ports through **memory-mapped registers**. One of the most valuable lessons I’ve learned through this project is how to navigate and interpret the **reference manual** and **datasheet** — both essential tools for bare-metal development.
 
-Although I’ve worked with other microcontrollers before, this was my first experience using ST’s ecosystem. I was curious to see how they structure their technical documentation, and I quickly realized just how critical it is to read beyond just the GPIO chapter.
+Although I’ve worked with other microcontrollers before, this was my first experience using ST’s ecosystem at the bare metal level. I was curious to see how they structure their technical documentation, and just how steep the learning curve for doing a simple blinking LED would be.
 
 ---
 
@@ -26,19 +26,20 @@ This decision helped me reason about:
 
 ## 📚 Understanding the Documentation
 
-Initially, I dove into **Chapter 9** of the reference manual, which covers GPIO configuration. But I quickly hit a wall trying to figure out where register addresses actually came from. That led me to explore:
+Initially, I dove into **Chapter 9** of the reference manual, which covers GPIO configuration. But I quickly hit a wall trying to figure out where register addresses actually came from. I had to take a look at the memory map.
 
 - **Chapter 2: System and Memory Overview**
 
 ![Memory Map Image Showing GPIOA](img/MemoryMap_1.png)
 
+That was quick and easy and I could see here what they meany by address ofset for their GPIO Peripheral.
+
 - **Chapter 7: Reset and clock control**
 
 ![alt text](img/SysClock_16MHzHSI.png)
 
-- **GPIO register maps and offsets**
-
-Understanding the **address offset + base address** concept was a turning point. Once I could calculate the address of something like `GPIOA_MODER`, it became much easier to reason about bit manipulation.
+A question I had was, how did the microcontroller decide what clock it would use. Luckily for me, it was just stated in the reference manual, which begs the question.
+Without any external help, how would I have found all of this out? I don't often think of an area of study as gatekept. But there is a small wall when you first start learning things that often require a teacher or external help.
 
 ---
 
