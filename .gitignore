@@ -5,3 +5,4 @@ Release/
 *.map
 *.lst
 .settings/
+*.launch
