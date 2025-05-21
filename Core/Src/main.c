@@ -56,6 +56,6 @@ int main(void) {
 
         GPIOA_ODR ^= (1 << 5); // Toggle PA5
         GPIOA_ODR ^= (1 << 1); // Toggle PA1
-        delay(100000);
+        delay(1000000);
     }
 }
