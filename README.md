@@ -1,6 +1,6 @@
 ## 📖 Hello Reader.
 
-In this very simple project I'm going to be going on a journey to blink and LED.
+In this very simple project I'm going to be going on a journey to blink an LED.
 It's the hello world of the Embedded Software Space. But enough Rambling from me. use the link below to see what I learned.
 
 P.S. I'm developing on a STM32G4431. I'm using the Nucleo development board. 
