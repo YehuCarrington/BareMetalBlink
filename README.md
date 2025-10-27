@@ -13,3 +13,14 @@ Here’s what I’ve documented:
 - [🎥 A Blinkin’ Video](https://youtu.be/EhbUuldCprk)
 
 Feel free to explore the links and see how it all comes together.
+
+I've returned about 5 months later to add the most difficult of difficult things serial outputs and reading a senser, so the project is going to have the format
+
+
+BareMetalBlink/
+│
+├── 01_Blink/
+├── 02_Read_Sensor/
+├── 03_Serial_Output/
+├── 04_Interrupt_Test/
+└── README.md
